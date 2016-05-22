@@ -1,0 +1,346 @@
+
+/******************************************************
+                     Общие
+******************************************************/
+* {
+  outline: 1px solid red;
+}
+
+html {
+  margin: 0;
+  padding: 0;  
+}
+
+body {
+  min-width: 900px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Tahoma", "sans-serif";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: #333333;
+}
+
+.container {
+  box-sizing: border-box;
+  min-width: 900px;
+  max-width: 900px;
+  padding: 0 20px;
+  /*padding: 0 2%;*/
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.both:after {
+  content: "";
+  clear: both;
+}
+
+.btn-light {
+
+}
+
+.btn-strong {
+
+}
+
+
+/******************************************************
+
+                РАСПОЛОЖЕНИЕ БЛОКОВ
+
+                      Header
+
+******************************************************/
+
+.header-main {
+  position: relative;
+  min-height: 80px;
+  padding-top: 23px;
+}
+
+.logo-main {
+  position: absolute;
+}
+
+.header-nav {
+  float: left;
+  width: 390px;
+  padding: 0;
+  margin: 0;
+  margin-left: 163px;
+
+}
+
+.header-nav ul {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav li {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.header-nav a {
+  display: block;
+  text-decoration: none;
+  padding: 6px 15px 9px 15px;
+  margin: 0;
+  outline: 1px solid blue;
+}
+
+.menu-level1 li {
+  display: inline-block;
+  vertical-align: top;
+  font-weight: medium;
+}
+
+.menu-level2 {
+  display: none;
+}
+
+.header-account {
+  float: right;
+  width: 290px;
+  text-align: right;
+  font-size: 0;
+}
+
+.header-account a {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  outline: 1px solid blue;
+  text-align: left;
+}
+
+.header-account .btn-search {
+  width: 33px;
+  height: 33px;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-enter,
+.btn-cart
+{
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  height: 33px;
+  padding: 7px 15px;  
+  padding-left: 44px;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.btn-enter {
+  width: 92px;
+}
+
+.btn-cart {
+  min-width: 117px;
+  max-width: 140px;
+}
+
+.header-work-time {
+  position: absolute;
+  right: 20px;
+  top: 72px;
+  font-weight: 500;
+  text-align: right;
+
+}
+
+.header-work-time p {
+  margin: 0;
+}
+
+.header-work-time .tel {
+  margin-top: 5px;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+/***************************************************
+                      slider
+***************************************************/
+
+/* фоны слайдера */
+
+
+.slider-content:before,
+.slider-content:after {
+  background-color: transparent;
+  height: 800px;
+  background: 50% 3px no-repeat transparent;
+}
+
+/* цвет фона страницы*/
+
+.slider-inner:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -100;
+}
+
+/*подсветка*/
+
+.slider-inner:before {
+  content: "";
+  position: absolute;
+  width: auto;
+  height: 880px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -90;
+}
+
+.slider-radio-1:checked ~ .slider-inner:before {
+  background-image: radial-gradient(#ccf3de, transparent 70%);
+}
+
+.slider-radio-2:checked ~ .slider-inner:before {
+  background-image: radial-gradient(#cce0f1, transparent 70%);
+}
+
+.slider-radio-3:checked ~ .slider-inner:before {
+  background-image: radial-gradient(#f1dbd2, transparent 70%);
+}
+
+.slider-inner:before {
+  -webkit-background-size: 1020px 1020px;
+  background-size: 1020px 1020px;
+  background-position: 50% -170px;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+/* цвет фона страницы*/
+
+.slider-radio-1:checked ~ .slider-inner:after {
+  background-color: #849d8f;
+}
+
+.slider-radio-2:checked ~ .slider-inner:after {
+  background-color: #8996a6;
+}
+
+.slider-radio-3:checked ~ .slider-inner:after {
+  background-color: #9d8b84;
+}
+
+/* мороженое, сглаживание краев */
+
+.slider-content:before,
+.slider-content:after {
+  content: "";
+  position: absolute;
+  width: auto;
+  top: 0px;
+  left: 0;
+  right: 0;
+}
+
+.slider-content:before {
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+  z-index: -70;
+}
+
+.slider-radio-1:checked ~ .slider-inner > .slider-content:before {
+  background-image: url(../img/icecream-1-8.png);
+}
+
+.slider-radio-2:checked ~ .slider-inner  > .slider-content:before {
+  background-image: url(../img/icecream-2-8.png);
+}
+
+.slider-radio-3:checked ~ .slider-inner  > .slider-content:before {
+  background-image: url(../img/icecream-3-8.png);
+}
+
+/*мороженое*/
+
+.slider-content:after {
+  z-index: -60;
+}
+
+
+.slider-radio-1:checked ~ .slider-inner  > .slider-content:after {
+  background-image: url(../img/icecream-1-8.png);
+}
+
+.slider-radio-2:checked ~ .slider-inner  > .slider-content:after {
+  background-image: url(../img/icecream-2-8.png);
+}
+
+.slider-radio-3:checked ~ .slider-inner  > .slider-content:after {
+  background-image: url(../img/icecream-3-8.png);
+}
+
+/* слайдер - описание */
+
+.slider-content {
+  position: relative;
+}
+
+.slider-description {
+  display: none;
+}
+
+.slider-radio-1:checked ~ .slider-inner .slider-description-1 {
+  display: block;
+}
+
+.slider-radio-2:checked ~ .slider-inner .slider-description-2 {
+  display: block;
+}
+
+.slider-radio-3:checked ~ .slider-inner .slider-description-3 {
+  display: block;
+}
+
+.slider-description-box {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #ffffff;
+  padding-top: 313px;
+  width: 700px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/***************************************************
+                      footer
+***************************************************/
+
+
+
+
+/***********************************************************
+                Всплывающие окна
+***********************************************************/
+
+
+/******************************************************
+                    графика
+******************************************************/
+
+
+
